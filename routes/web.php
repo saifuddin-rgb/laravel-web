@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MatakuliahController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MahasiswaController;
 
 Route::get('/', function () {
@@ -28,3 +29,4 @@ Route::get('/about', function () {
 
 Route::get('/matakuliah', [MatakuliahController::class, 'index']);
 Route::get('/matakuliah/show/{kode?}', [MatakuliahController::class, 'show']);
+Route::get('/home', [HomeController::class, 'index']);
